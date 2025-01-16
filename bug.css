@@ -1,0 +1,12 @@
+The following CSS code snippet causes an unexpected rendering issue in some browsers:
+
+```css
+div {
+  width: 50%;
+  height: 50%;
+  background-color: lightblue;
+  float: left;
+}
+```
+
+The issue arises when a `div` element is floated left and has percentage-based width and height values.  Some browsers might interpret the percentage values relative to the parent element's content area, rather than the parent element's total area, leading to incorrect sizing.

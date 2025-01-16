@@ -1,0 +1,18 @@
+To fix the inconsistent rendering, avoid using percentage-based height for floated elements. A more reliable approach is to use flexbox or grid layout.
+
+Here's an example using flexbox:
+
+```css
+.container {
+  display: flex;
+  width: 100%;
+}
+
+div {
+  width: 50%;
+  height: 100%; /* Height now works as expected with flexbox */
+  background-color: lightblue;
+}
+```
+
+This approach ensures consistent rendering across different browsers because flexbox handles layout and sizing more predictably than the float property when dealing with percentage dimensions.
